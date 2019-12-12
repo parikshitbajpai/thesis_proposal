@@ -265,7 +265,7 @@ where $N_p$ denotes the number of excess mixing parameters (note: $N_p \ge N_s$)
 			\end{equation}
 			where, ${\nu}_{i,j}$ and ${\nu}_{\omega}$ represent the stoichiometric coefficients of element $j$ in solution phase species $j$ and stoichiometric phase $\omega$ respectively. In an electrochemical system where the electrons form a system component with zero moles overall in the system, the mass balance constraint represents charge neutrality constraint.
 			
-		Thermodynamic equilibrium conditions also require that the \textbf{Gibbs' phase rule} must also be satisfied. Gibbs' phase rule determines the \emph{degree of freedom} of the system i.e. the number of phases that can be stable at equilibrium in relation to the state variables \cite{Gibbs:1878aa}. in general, the phase rule can be written as: 
+		Thermodynamic equilibrium conditions also require that the \textbf{Gibbs' phase rule} must also be satisfied. Gibbs' phase rule determines the \emph{degree of freedom} of the system i.e. the number of phases that can be stable at equilibrium in relation to the state variables \cite{Gibbs:1878aa}. In general, the phase rule can be written as: 
 			\begin{equation} 
                 			F=C-\Phi + 2 + \Xi
             		\end{equation}
@@ -290,7 +290,7 @@ where $N_p$ denotes the number of excess mixing parameters (note: $N_p \ge N_s$)
 			d G_{sys} = \sum_{\phi=1}^{\Phi} \sum_{i=1}^{N_{\phi}} \left( d n_{i(\phi)}\mu_{i(\phi)} \right) = 0
 		\end{equation}
 		
-		The chemical potentials of the species can be written in terms of the chemical potentials of the system components. Therefore, substituting equation~ref{eq:massbalance} into equation~\ref{eq:elempot}, differentiating with respect to $n_{i(\phi)}$ at constant temperature and pressure and equating to zero gives:
+		The chemical potentials of the species can be written in terms of the chemical potentials of the system components. Therefore, substituting equation~\ref{eq:massbalance} into equation~\ref{eq:elempot}, differentiating with respect to $n_{i(\phi)}$ at constant temperature and pressure and equating to zero gives:
 		\begin{equation}\label{eqn:dGibbs4}
 			d G_{sys} = \sum_{\phi=1}^{\Phi} \sum_{i=1}^{N_{\phi}}  d n_{i(\phi)}\sum_{j=1}^{C}\nu_{i,j}\Gamma_j  = 0
 		\end{equation}
@@ -305,7 +305,7 @@ where $N_p$ denotes the number of excess mixing parameters (note: $N_p \ge N_s$)
 			\mu_{i(\phi)} = \sum_{j=1}^{C}\nu_{i,j}\Gamma_j
 		\end{equation}
 		
-		Ensuring that equation~\ref{eqn:dGibbs6} is satisfied for all species in the system is equivalent to satisfying the equilibrium criterion that the Gibbs energy of the system is at a global minimum. This is useful in developing a convergence criterion for thermodynamic equilibrium calculations and is discussed in the following section.
+		Ensuring that equation~\ref{eqn:dGibbs6} is satisfied for all species in the system is equivalent to satisfying the equilibrium criterion that the Gibbs energy of the system is at a local minimum. This is useful in developing a convergence criterion for thermodynamic equilibrium calculations and is discussed in the following section.
 		
 	\subsection{Convergence criteria}
 	A number of different methods can be proposed to judge the convergence of a thermodynamic equilibrium solver, the most obvious being ensuring that the relative change in Gibbs energy between two iterations is within a specified tolerance. Another approach that makes better use of principles of thermodynamic equilibrium is based on equation~\ref{eqn:dGibbs6} and requires that the chemical potentials of all species lie on or above the Gibbs plane formed by chemical potentials of system components.  
